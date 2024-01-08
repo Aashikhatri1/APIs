@@ -12,6 +12,7 @@ app = Flask(__name__)
 def post_data():
     # Parse data from request
     data = request.data.decode('utf-8')
+    print(data)
 
     # Save data to MongoDB
     # collection.insert_one(data)
