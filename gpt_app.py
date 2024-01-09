@@ -3,10 +3,10 @@ from pymongo import MongoClient
 
 app = Flask(__name__)
 
-# Configure MongoDB client
-client = MongoClient("mongodb+srv://admin@mygitdb.v0gnkoy.mongodb.net/")
-db = client.Meeting_automation
-collection = db.meeting_link
+# # Configure MongoDB client
+# client = MongoClient("mongodb+srv://admin@mygitdb.v0gnkoy.mongodb.net/")
+# db = client.Meeting_automation
+# collection = db.meeting_link
 
 @app.route('/postdata', methods=['POST'])
 def post_data():
@@ -15,7 +15,7 @@ def post_data():
     print(data)
 
     # Save data to MongoDB
-    collection.insert_one(data)
+    # collection.insert_one(data)
 
     # Send response
     return jsonify({'message': 'information noted'})
